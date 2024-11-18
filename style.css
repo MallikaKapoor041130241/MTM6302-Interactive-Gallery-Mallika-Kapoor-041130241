@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif; /* Applying Poppins font */
+    background-color: #000; /* Dark background */
+    color: #FFD700; /* Yellow text */
+    overflow-x: hidden;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #800020, #FF7F50);
+    color: #FFFFFF;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600; /* Bold style for Poppins */
+  }
+  
+  header p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 300; /* Lighter style for contrast */
+  }
+  
+  /* Gallery Styles */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #ffeaf0; /* Burgundy border */
+    border-radius: 2px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    border-color: #FF7F50; /* Orange on hover */
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #D2B48C; /* Teak Wood Smoky */
+    z-index: 1000;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 70%;
+    border: 5px solid #FFD700; /* Yellow border */
+    border-radius: 15px;
+  }
+  
+  .modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #FF7F50; /* Orange */
+    cursor: pointer;
+  }
+  
+  #modal-details {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400; /* Regular weight for modal details */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #800020; /* Burgundy */
+    color: #FFFFFF;
+  }
+  
