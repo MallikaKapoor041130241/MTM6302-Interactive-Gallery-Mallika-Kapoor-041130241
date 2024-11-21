@@ -1,33 +1,66 @@
-// Data for the gallery images
 const galleryData = [
     {
-      src: "C:\Users\HP\Downloads\MPP Midterm\IMAGE.GRAFFITI.jpg",
+      src: "images/grafitti-alley.jpg",
       title: "Graffiti Alley",
       description: "A vibrant stretch of street art and murals in Toronto's downtown core.",
     },
     {
-      src: "C:\Users\HP\Downloads\MPP Midterm\IMAGE.ART GALLERY.jpg",
+      src: "images/pic1.jpg",
       title: "Art Gallery of Ontario",
       description: "Explore iconic artwork at the renowned Art Gallery of Ontario.",
     },
     {
-      src: "images/sculpture.jpg",
+      src: "images/sculpture-garden.jpg",
       title: "Toronto Sculpture Garden",
       description: "A unique spot featuring innovative sculptures in a public setting.",
     },
     {
-      src: "images/distillery.jpg",
+      src: "images/DistilleryDistrict.jpg",
       title: "Distillery District",
       description: "Historic area known for its art galleries and installations.",
     },
     {
-      src: "images/toronto_sign.jpg",
+      src: "images/torontosign.jpg",
       title: "Toronto Sign",
       description: "A symbol of the city, often creatively lit for different events.",
     },
+    {
+      src: "images/elgin-and-winter-garden-theatre.jpg",
+      title: "Elgin & Winter Garden Theatre",
+      description: "The Elgin & Winter Garden Theatres are a pair of stacked theatres in Toronto, Ontario, Canada. The Winter Garden Theatre is seven storeys above the Elgin Theatre. They are the last surviving Edwardian stacked theatres in the world.",
+    },
+    {
+      src: "images/mca.jpg",
+      title: "Museum of Contemporary Art",
+      description: "The Museum of Contemporary Art Toronto Canada (MOCA), is a museum and art gallery in Toronto, Ontario. It is an independent, registered charitable organization.",
+    },
+    {
+      src: "images/tfs.jpg",
+      title: "Toronto Film School",
+      description: "The school offers creative diploma programs in the areas of film, entertainment, fashion, design, and video games.",
+    },
+    {
+      src: "images/Casa-Loma.jpg",
+      title: "Casa Loma",
+      description: "Casa Loma is a magnificent 1914 castle located in Toronto, Canada. It stands out for its impressive Gothic architecture and picturesque gardens that are only open during certain seasons.",
+    },
+    {
+      src: "images/Gardiner-Museum.jpg",
+      title: "Gardiner Museum",
+      description: "The Gardiner Museum is not just a ceramics museum, but also offers various activities such as classes, lectures, and tours.",
+    },
+    {
+      src: "images/Roy-Thomson-Hall.jpg",
+      title: "Roy Thomson Hall",
+      description: "Roy Thomson Hall is a renowned concert venue in Toronto, famous for its exceptional acoustics. It serves as the home to the Toronto Symphony Orchestra.",
+    },
+    {
+      src: "images/Textile-Museum-of-Canada.jpg",
+      title: "Textile Museum of Canada",
+      description: "The Textile Museum of Canada is a unique institution in Canada that showcases historical and cultural fabrics, contemporary art, and interactive exhibits.",
+    }
   ];
   
-  // Function to dynamically create the gallery
   const gallery = document.getElementById("gallery");
   
   galleryData.forEach((item) => {
@@ -60,5 +93,26 @@ const galleryData = [
     if (e.target === modal) {
       modal.classList.add("hidden");
     }
+  });
+ 
+  // Get the gallery container from the DOM (this is where images will be inserted)
+  const galleryContainer = document.getElementById("gallery-container");
+  
+  // Loop through the array of images
+  images.forEach((image) => {
+    // Create a new img element for each image
+    const imgElement = document.createElement("img");
+  
+    // Set the src and alt attributes of the img element
+    imgElement.src = image.src;
+    imgElement.alt = image.title;
+  
+    // Optionally, add a title or description when clicked (as an example)
+    imgElement.addEventListener("click", () => {
+      alert(`Title: ${image.title}\nDescription: ${image.description}`);
+    });
+  
+    // Append the img element to the gallery container in the HTML
+    galleryContainer.appendChild(imgElement);
   });
   
